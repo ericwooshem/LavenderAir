@@ -142,6 +142,7 @@ Different models may require some or all of these steps. Model is noted in (pare
 
 
 11. (NanoPMM-BT-LED & MegaPMM) Connect the Bluetooth module 
+
 |HC-05 Pin Label|Arduino Pin|
 |---|---|
 |+5V|5V row|
