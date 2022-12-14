@@ -290,7 +290,7 @@ __RH [%]__: Relative Humidity, in percentage. From DHT.
 
 A company called [PurpleAir*](https://www2.purpleair.com/) produces AQI Monitors that are ready to use out of the box. Here's how our DIY PMM device compares.
 
-![Comparison table](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/PMM_Comparison_Table_v1.png)
+![Comparison table](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/PMM_Comparison_Table_v2.png)
 
 
 # Project Status & Contributions
