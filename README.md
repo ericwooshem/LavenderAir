@@ -33,12 +33,6 @@ __NanoPMM-BT-LED__: Single Sensor + Bluetooth logging to a computer + LED color 
 __MegaPMM__: The most advanced model. Includes Dual Sensor for increased accuracy + LCD Display to show current readings + SD card logging + LCD color indicator + Bluetooth logging to a computer + Serial output to ArduinoIDE. (Work in progress)
 
 
-## Project Status
-
-LavenderAir is a work in progress. Currently, a single sensor with SD card logging, LCD display, and LED color indicator modes work independently, but SD and LCD cannot be used simultaneously because the amount of data processing and variables required exceeds the memory available for an Arduino Nano or Uno.
-
-Development of the MegaPMM version is in-progress. Currently, there is no working prototype available, and specs are based on theoretical features we expect are possible.
-
 # Instructions
 
 ### Parts
@@ -215,9 +209,7 @@ In each code, there are a series of variables for each feature (Serial, DHT, LCD
 [Arduino IDE / Code Upload Issues](https://support.arduino.cc/hc/en-us/articles/4403365313810-Errors-when-uploading-a-sketch)   
 [Arduino Nano Select Processor](https://support.arduino.cc/hc/en-us/articles/4401874304274-Select-the-right-processor-for-Arduino-Nano)   
 [Wiring Intro for Beginners](https://learn.adafruit.com/breadboards-for-beginners/introduction)    
-[SCD-30 Sensor](https://learn.adafruit.com/adafruit-scd30)   
 [Alternative Method to Set Date and Time on RTC](https://create.arduino.cc/projecthub/tittiamo68/clock-set-date-time-0d46a4) Note: Use the LCD wiring from this project instead.  
-[Intro to SD and Micro SD Card Modules with Arduino](https://create.arduino.cc/projecthub/electropeak/sd-card-module-with-arduino-how-to-read-write-data-37f390)  
 
 ### Arduino to computer connection not working / code won't upload
 
@@ -301,7 +293,19 @@ A company called [PurpleAir*](https://www2.purpleair.com/) produces AQI Monitors
 ![Comparison table](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/PMM_Comparison_Table_v1.png)
 
 
-## Contributors
+# Project Status & Contributions
+
+LavenderAir is a work in progress. If you create an improvement to this project or complete some of the planned features before we can, please contact us so we can add your contribution and/or feel free to fork this project. 
+
+Currently, a single sensor with SD card logging, LCD display, and LED color indicator modes work independently, but SD and LCD cannot be used simultaneously because the amount of data processing and variables required exceeds the memory available for an Arduino Nano or Uno.
+
+We found these errors when attempting to combine all of the features to a single Arduino Nano device:
+![Low memory](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/Arduino_Low_Memory_Warning.png)
+![No memory](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/Arduino_Out_Of_Memory_Error.png)
+
+Development of the MegaPMM version is in-progress. Currently, there is no working prototype available, and specs are based on theoretical features we expect are possible.
+
+## Creators
 [Eric Woo-Shem](https://github.com/ericwooshem): Project conceptualization, original design, component selection & original BOM, programming: sensor firmware prototype, bluetooth, RTC.
 
 [Brian Woo-Shem](https://www.brianwooshem.com): Programming: production firmware, SD logging, conversion to AQI readings, debugging; cost comparison analysis for new BOM, research, documentation, data analysis, sensor testing and validation, visualizations.
