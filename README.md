@@ -35,7 +35,7 @@ __MegaPMM__: The most advanced model. Includes Dual Sensor for increased accurac
 
 # Instructions
 
-### Parts
+## Components
 
 This is a *frugal* AQI sensor so most of the parts can be interchanged with similar ones. A detailed Bill of Materials with the exact components used in this version of the sensor is provided as "[LavenderAir_Bill_of_Materials.xlsx](https://github.com/ericwooshem/LavenderAir/blob/main/VioletAir_AQI_Sensor_Bill_of_Materials.xlsx)". Different sheets show suggestions for products to purchase for the lowest cost for the different models above. The quantities and exact cost autocompute if you plug in the number of sensors you want to build. 
 
@@ -45,7 +45,7 @@ This is a *frugal* AQI sensor so most of the parts can be interchanged with simi
 
 One sensor can be built for roughly $100, and 10 sensors for about $87 each if all parts are purchased new (As of August 2021).
 
-#### List of Parts
+### List of Parts
 
 This is a general list of components; see the [Bill of Materials](https://github.com/ericwooshem/LavenderAir/blob/main/VioletAir_AQI_Sensor_Bill_of_Materials.xlsx) for all parts & product suggestions by each PMM model.
 
@@ -235,7 +235,7 @@ When using the sensor, you can simply read the values from the screen. However, 
 2. Connect the (Micro) SD card to your computer, using adapters if necessary.
 3. Copy the file on the card “PMM_Data.txt” to your computer. The file is structured as follows:   
 	![PMM Data File](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/PMM_Data_CSV_Demo.png)   
-4. Typically, we want to import the data to a spreadsheet software like Excel or Google Sheets. We also want the times and the CO2 readings separated for so we can plot the values and compare over time. See the instructions below for your specific software. 
+4. Typically, we want to import the data to a spreadsheet software like Excel or Google Sheets. We also want the times and the readings separated for so we can plot the values and compare over time. See the instructions below for your specific software. 
 
 ## Data Columns
 
@@ -306,10 +306,19 @@ We found these errors when attempting to combine all of the features to a single
 
 Development of the MegaPMM version is in-progress. Currently, there is no working prototype available, and specs are based on theoretical features we expect are possible.
 
+3D printed cases & a weatherproof outdoor housing is coming soon.
+
+
 ## Creators
 [Eric Woo-Shem](https://github.com/ericwooshem): Project conceptualization, original design, component selection & original BOM, programming: sensor firmware prototype, bluetooth, RTC.
 
 [Brian Woo-Shem](https://www.brianwooshem.com): Programming: production firmware, SD logging, conversion to AQI readings, debugging; cost comparison analysis for new BOM, research, documentation, data analysis, sensor testing and validation, visualizations.
+
+### Also by the creators
+
+The structure of this project, resources, and some documentation are taken from the [DIY Frugal Arduino CO₂ Sensor Monitor](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor), a sub-$100 system to track and evaluate COVID-19 risk using CO₂ levels to estimate ventilation and occupancy, also by the same development team.
+
+Our projects have been used in the [curriculum for engineering courses](https://www.brianwooshem.com/co2-sensor-lab/) at a major university.
 
 ## License
 
