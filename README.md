@@ -37,13 +37,10 @@ __MegaPMM__: The most advanced model. Includes Dual Sensor for increased accurac
 
 ## Components
 
-This is a *frugal* AQI sensor so most of the parts can be interchanged with similar ones. A detailed Bill of Materials with the exact components used in this version of the sensor is provided as "[LavenderAir_Bill_of_Materials.xlsx](https://github.com/ericwooshem/LavenderAir/blob/main/VioletAir_AQI_Sensor_Bill_of_Materials.xlsx)". Different sheets show suggestions for products to purchase for the lowest cost for the different models above. The quantities and exact cost autocompute if you plug in the number of sensors you want to build. 
+This is a *frugal* AQI sensor so most of the parts can be interchanged with similar ones. See "[LavenderAir_Bill_of_Materials.xlsx](https://github.com/ericwooshem/LavenderAir/blob/main/VioletAir_AQI_Sensor_Bill_of_Materials.xlsx)" for more details. Different sheets show suggestions for products to purchase for the lowest cost for the different models above. The quantities and cost autocompute if you plug in the number of sensors you want to build. 
 
 **Note:** Product suggestions in Bill of Materials are for convenience only. This project does not receive any incentive, financial or otherwise, for suggesting any particular product.
 
-#### Cost
-
-One sensor can be built for roughly $100, and 10 sensors for about $87 each if all parts are purchased new (As of August 2021).
 
 ### List of Parts
 
@@ -289,9 +286,9 @@ __RH [%]__: Relative Humidity, in percentage. From DHT.
 
 ## Comparison to PurpleAir*
 
-A company called [PurpleAir*](https://www2.purpleair.com/) produces AQI Monitors that are ready to use out of the box. Here's how our DIY PMM device compares.
+A company called [PurpleAir*](https://www2.purpleair.com/) produces AQI Monitors that are ready to use out of the box. Here's how our DIY PMM device compares. "F" denotes "Future/Planned" features that are in progress but not yet working.
 
-![Comparison table](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/PMM_Comparison_Table_v2.png)
+![Comparison table](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/PMM_Comparison_Table_v3.png)
 
 
 # Project Status & Contributions
@@ -329,9 +326,9 @@ RTClib and Adafruit_PM25AQI are Copyright (c) Adafruit Industries and used under
 
 Arduino IDE and related components are open source and licensed under the GNU GPL v2 and/or CC BY-SA Arduino.
 
-*PurpleAir is a trademark of PurpleAir, Inc. 
+*PurpleAir is a trademark of PurpleAir, Inc. LavenderAir is in no way affiliated nor endorsed by PurpleAir, Inc.. LavenderAir components do not connect to nor interact with the PurpleAir network.
 
-This project “LavenderAir” is a noncommercial, open-source project that seeks to replicate many features of the PurpleAir sensors. LavenderAir is in no way affiliated nor endorsed by PurpleAir, Inc., and LavenderAir components do not connect to nor interact with the PurpleAir network. LavenderAir monitors are “functional clones” built using off-the-shelf parts and no knowledge of commercial monitors aside from basic specifications made public on vendor websites. The creators of LavenderAir have no intention of any copyright or patent infringement, and to our best knowledge this project abides by all U.S. and international copyright laws. 
+This project “LavenderAir” is a noncommercial, open-source project that seeks to replicate many features of the PurpleAir sensors.  LavenderAir monitors are built using off-the-shelf parts and with knowledge of commercial monitors aside from basic specifications made public on vendor websites. The creators of LavenderAir have no intention of any copyright or patent infringement. We are students and generate no revenue from this project; if we inadvertenly overlooked any legal issues please contact us and we will act in good faith to resolve the issue.
 
 ## References
 
@@ -350,5 +347,5 @@ This project “LavenderAir” is a noncommercial, open-source project that seek
 [13] Adafruit_PM25AQI library for Arduino, (C) 2012, Adafruit Industries under BSD License. https://github.com/adafruit/Adafruit_PM25AQI  
 [14] PurpleAir "Map Start-Up Guide" https://community.purpleair.com/t/map-start-up-guide/90   
 [15] PurpleAir "How do PurpleAir sensors compare to regulatory particulate matter sensors?" https://community.purpleair.com/t/q-how-do-purpleair-sensors-compare-to-regulatory-particulate-matter-sensors/810   
-[16] PurpleAir. https://www2.purpleair.com/
+[16] PurpleAir. https://www2.purpleair.com/  
 
