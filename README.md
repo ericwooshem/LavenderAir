@@ -24,20 +24,20 @@ The LavenderAir project is developing an open-source PM/AQI monitor that is __lo
 
 ## Monitor Models & Versions
 
-__NanoPMS-Disp__: Single Sensor + View current readings on LCD Display + Serial Output to ArduinoIDE
+__NanoPMM-Disp__: Single Sensor + View current readings on LCD Display + Serial Output to ArduinoIDE (Working)
 
-__NanoPMS-SD-LED__: Single Sensor + SD card logging + LED color indicator
+__NanoPMM-SD-LED__: Single Sensor + SD card logging + LED color indicator (Working)
 
-__NanoPMS-BT-LED__: Single Sensor + Bluetooth logging to a computer + LED color indicator
+__NanoPMM-BT-LED__: Single Sensor + Bluetooth logging to a computer + LED color indicator. (Work in progress)
 
-__MegaPMS__: The most advanced model. Includes Dual Sensor for increased accuracy + LCD Display to show current readings + SD card logging + LCD color indicator + Bluetooth logging to a computer + Serial output to ArduinoIDE.
+__MegaPMM__: The most advanced model. Includes Dual Sensor for increased accuracy + LCD Display to show current readings + SD card logging + LCD color indicator + Bluetooth logging to a computer + Serial output to ArduinoIDE. (Work in progress)
 
 
 ## Project Status
 
 LavenderAir is a work in progress. Currently, a single sensor with SD card logging, LCD display, and LED color indicator modes work independently, but SD and LCD cannot be used simultaneously because the amount of data processing and variables required exceeds the memory available for an Arduino Nano or Uno.
 
-Development of the MegaPMS version is in-progress. Currently, there is no working prototype available, and specs are based on theoretical features we expect are possible.
+Development of the MegaPMM version is in-progress. Currently, there is no working prototype available, and specs are based on theoretical features we expect are possible.
 
 # Instructions
 
@@ -70,7 +70,8 @@ This is a general list of components; see the [Bill of Materials](https://github
 |RGB Tri-Color 4-pin LED|1|All; optional for NanoPMM-Disp|
 |Jumper wires|10-20|All|
 |USB Power Bank Battery 5V or USB Power supply|1|Optional|
-|16x2 I2C LCD Display: Optional; only needed if you want to display the current CO₂ levels|1|NanoPMM-Disp & MegaPMM|
+|16x2 I2C LCD Display: |1|NanoPMM-Disp & MegaPMM|
+|HC-05 Bluetooth Module|1|NanoPMM-BT & MegaPMM|
 |Small Box: Cardboard, 3D printed, etc. |1|All|
 
 
@@ -85,12 +86,12 @@ Complete connection diagram.
 
 Different models may require some or all of these steps. Model is noted in (parenthesis) at the start of each step.
 
-1. (NanoPMS-SD-LED and MegaPMS) Insert the CR2032 battery into the RTC, and your memory card into your card reader.
+1. (NanoPMM-SD-LED and MegaPMM) Insert the CR2032 battery into the RTC, and your memory card into your card reader.
 
 	![Micro SD](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I1.png) ![RTC](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I2.png)
 
 
-4. (NanoPMS) Place and push in the Arduino Nano into one of the breadboards, as shown.
+4. (NanoPMM) Place and push in the Arduino Nano into one of the breadboards, as shown.
 
 	![Arduino Nano Breadboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I5.png)
 
@@ -101,7 +102,7 @@ Different models may require some or all of these steps. Model is noted in (pare
 
 	![Arduino-Breadboard](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I8.png)
 
-8. (NanoPMS-SD-LED and MegaPMS) Connect the Real Time Clock module using 4 male-to-female wires:
+8. (NanoPMM-SD-LED and MegaPMM) Connect the Real Time Clock module using 4 male-to-female wires:
 
 |Sensor Wire|Breadboard Row|
 |---|---|
@@ -112,7 +113,7 @@ Different models may require some or all of these steps. Model is noted in (pare
 
    ![RTC-Wires](https://github.com/ericwooshem/DIY-Frugal-Arduino-CO2-Sensor/blob/main/Graphics/I9.png)
 
-9. (NanoPMS-SD-LED and MegaPMS) Connect the SD Card Reader using 6 male-to-female wires:
+9. (NanoPMM-SD-LED and MegaPMM) Connect the SD Card Reader using 6 male-to-female wires:
 
 |Sensor Wire|Breadboard Row|
 |---|---|
@@ -136,7 +137,7 @@ Different models may require some or all of these steps. Model is noted in (pare
 
 ![PMS5003 Wires](https://github.com/ericwooshem/LavenderAir/blob/main/Graphics/PMS5003_Wires_Colors.png)
 
-11. Connect the LCD Wires.
+11. (NanoPMM-Disp & MegaPMM) Connect the LCD Wires.
 
 |LCD Pin Label|Arduino Pin|
 |---|---|
@@ -146,7 +147,29 @@ Different models may require some or all of these steps. Model is noted in (pare
 |SCL|A5|
 
 
+11. (NanoPMM-BT-LED & MegaPMM) Connect the Bluetooth module 
+|HC-05 Pin Label|Arduino Pin|
+|---|---|
+|+5V|5V row|
+|GND|Ground row|
+|RX|RX0|
+|TX|TX1|
+
 Congratulations! The sensor is fully assembled. Now connect the Arduino to your computer and upload the program to use it.
+
+## Code Modifications
+
+In each code, there are a series of variables for each feature (Serial, DHT, LCD Display, MulticolorLED, RTC, and Debug mode). Change booleans to `false` for features you are not using, and `true` for features you want to use.
+
+    // Settings: Change to false if not using that component
+    const bool useSerial = true;
+    const bool useDHT = true;
+    const bool useDisplayLCD = false;
+    const bool useDisplayI2C = true;
+    //const bool useSeparateLED = false; //not implemented yet
+    const bool useColorLED = true;
+    const bool debugMode = false;
+    bool useRTC = true;
 
 
 ## Uploading the Program
