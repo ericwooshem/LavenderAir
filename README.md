@@ -326,9 +326,9 @@ RTClib and Adafruit_PM25AQI are Copyright (c) Adafruit Industries and used under
 
 Arduino IDE and related components are open source and licensed under the GNU GPL v2 and/or CC BY-SA Arduino.
 
-*PurpleAir is a trademark of PurpleAir, Inc. LavenderAir is in no way affiliated nor endorsed by PurpleAir, Inc.. LavenderAir components do not connect to nor interact with the PurpleAir network.
+\*PurpleAir is a trademark of PurpleAir, Inc. LavenderAir is in no way affiliated nor endorsed by PurpleAir, Inc.. LavenderAir components do not connect to nor interact with the PurpleAir network.
 
-This project “LavenderAir” is a noncommercial, open-source project that seeks to replicate many features of the PurpleAir sensors.  LavenderAir monitors are built using off-the-shelf parts and with knowledge of commercial monitors aside from basic specifications made public on vendor websites. The creators of LavenderAir have no intention of any copyright or patent infringement. We are students and generate no revenue from this project; if we inadvertenly overlooked any legal issues please contact us and we will act in good faith to resolve the issue.
+This project “LavenderAir” is a noncommercial, open-source project that seeks to replicate many features of the PurpleAir sensors.  LavenderAir monitors are built using off-the-shelf parts and with no knowledge of commercial monitors except for specifications made public on vendor websites. The creators of LavenderAir have no intention of any copyright or patent infringement. We are students and generate no revenue from this project; if we inadvertenly overlooked any legal issues please contact us and we will act in good faith to resolve the issue.
 
 ## References
 
